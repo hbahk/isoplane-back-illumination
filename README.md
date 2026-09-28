@@ -10,9 +10,9 @@
 4. Branch: main, Folder: / (root)를 선택하고 Save합니다.
 5. Pages 설정 화면에 표시되는 사이트 주소를 공유합니다. 첫 배포에 몇 분이 걸릴 수 있습니다.
 
-게시 예정 저장소: hbahk/isoplane-back-illumination
+저장소: hbahk/isoplane-back-illumination
 
-게시 후 예상 주소 (아직 배포되지 않음): https://hbahk.github.io/isoplane-back-illumination/
+3D 검토 페이지: https://hbahk.github.io/isoplane-back-illumination/
 
 ## 포함 파일
 
