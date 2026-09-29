@@ -1,30 +1,23 @@
-# K-SPEC v09 design review
+# K-SPEC v10 design review
 
-검토용 3D 모델입니다. 실제 분광기 내부 치수, grating 간섭, 고정 강도 및 파손 시 낙하 방지는 검증되지 않았습니다. 승인된 제작 도면이 아닙니다.
+[Open the interactive model](https://hbahk.github.io/isoplane-back-illumination/) · [Previous v09](https://hbahk.github.io/isoplane-back-illumination/v09.html)
 
-## GitHub Pages 게시 방법
+LM2370 12V 150 mm를 공통으로 사용하는 두 교체형 암의 검토용 모델입니다.
 
-1. 게시할 GitHub 저장소를 만듭니다. GitHub Free에서는 공개(Public) 저장소를 사용합니다.
-2. 이 폴더의 내용물을 저장소 최상위에 올립니다. ZIP 자체나 이 폴더를 한 단계 더 감싸서 올리지 않습니다. 최상위에 index.html이 보여야 합니다.
-3. Settings → Pages → Build and deployment → Source: Deploy from a branch.
-4. Branch: main, Folder: / (root)를 선택하고 Save합니다.
-5. Pages 설정 화면에 표시되는 사이트 주소를 공유합니다. 첫 배포에 몇 분이 걸릴 수 있습니다.
+- Metaphase MB-TBL2X2-B-24-ILZ 직접 장착: 모델 삽입 두께 약17.9 mm. 제공된 STEP 형상을 사용합니다.
+- 백업 PTFE 32×32 mm + LED 2개: 모델 삽입 두께8.5 mm.
+- 같은 가이드·외부 flag 방식 센서·지지대를 공유합니다. 두 암의 최대 안내 레일 폭은68 mm입니다.
+- X ±20 mm / Y ±5 mm 검토 범위. 그 밖의 기구 슬롯 범위는 사용 가능하다고 검증되지 않았습니다.
 
-저장소: hbahk/isoplane-back-illumination
+모델 부품의 지정 자세·이동 표본과 브라우저 제어를 확인했습니다. 실제 분광기 개구부, grating 회전 범위, 본체 나사, 강도·저온·차광, 전선 거동 및 파손 시 포획은 검증되지 않았습니다. 제작·장착이 승인된 도면이 아닙니다. [검토 범위](review.html)를 먼저 확인하세요.
 
-3D 검토 페이지: https://hbahk.github.io/isoplane-back-illumination/
+## Files
 
-## 포함 파일
+- `index.html`: self-contained WebGL viewer, both variants.
+- `review.html`: design changes, assumptions, and verification limits.
+- `parts.csv`, `additional-parts.csv`: print parts and changed hardware.
+- `wiring.svg`, `wiring-backup.svg`: functional power/control diagrams, not finalized pin-level schematics.
+- `preview.png`: static preview.
+- `v09.html` and `*-v09.*`: archived prior review.
 
-- index.html: 모델과 3D 프로그램을 내장한 독립형 HTML
-- review.html: 검토 결과와 확인되지 않은 사항
-- parts.csv: 부품표
-- wiring.svg: 기능 배선도 (확정 회로도 아님)
-- preview.png: 정적 미리보기
-- .nojekyll: 별도 Jekyll 변환 없이 정적 파일 게시
-
-데스크톱의 WebGL 지원 브라우저를 권장합니다. 로컬 파일로도 열 수 있습니다. 원본 매뉴얼·구매 페이지·개인 경로·CAD 제작 파일은 배포본에 포함하지 않았습니다. 다만 HTML에는 표시용 3D 형상 데이터가 들어 있으므로 웹 공개 시 그 데이터도 공개됩니다.
-
-GitHub Pages 일반 공개 사이트에는 열람자별 비밀번호나 접근 제한이 없습니다. 비공개 저장소만으로 웹사이트가 비공개가 되는 것은 아닙니다.
-
-https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
+인터넷 없이 HTML을 직접 열 수도 있습니다. 표시용 메시는 HTML에 포함되어 공개됩니다. 원본 사용자 STEP, 원본 매뉴얼, 구매 파일, 개인 경로, 이메일은 이 공개 패키지에 포함하지 않습니다. Three.js/OrbitControls notices are in THIRD_PARTY_NOTICES.txt.

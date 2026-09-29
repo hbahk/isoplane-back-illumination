@@ -1,32 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="840" height="730" viewBox="0 0 840 730" role="img" aria-label="12V 전원, 모터 드라이버, LED, 센서의 기능 연결도">
-<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#5b7180"/></marker></defs>
-<style>text{font-family:system-ui,-apple-system,sans-serif;fill:#24424f;font-size:16px}.small{font-size:14px;fill:#526b77}.box{fill:#f0f6f8;stroke:#b8cfd7;stroke-width:1.5}.wire{fill:none;stroke:#5b7180;stroke-width:2;marker-end:url(#arr)}.motor{stroke:#b55259}.led{stroke:#ca8a20}.sense{stroke:#9469b3}</style>
-<rect width="840" height="730" fill="white"/>
-<text x="24" y="30" font-size="20" font-weight="650">기능 연결도 — 보드 단자 번호·보호소자 정격은 미확정</text>
-<rect class="box" x="24" y="54" width="190" height="66" rx="7"/><text x="42" y="82">인증된 12 V DC 전원</text><text class="small" x="42" y="105">AC 배선은 제어함 밖</text>
-<path class="wire" d="M214 87H257"/><rect class="box" x="260" y="54" width="228" height="66" rx="7"/><text x="278" y="82">퓨즈 · 전체 전원 차단</text><text class="small" x="278" y="105">퓨즈값: 기동/고착 전류 확인 후</text>
-<path class="wire motor" d="M488 87H585V171"/>
-<rect class="box" x="469" y="173" width="230" height="74" rx="7"/><text x="485" y="201">H-브리지 · 전류 제한</text><text class="small" x="485" y="225">모터 전류 측정 / 방향 제어</text>
-<path class="wire motor" d="M699 196H760V295H685"/>
-<rect class="box" x="469" y="266" width="214" height="70" rx="7"/><text x="485" y="295">J1 → 액추에이터 M1/M2</text><text class="small" x="485" y="319">2선 / 내장 끝단 정지 별도 확인</text>
-<path class="wire" d="M315 120V172"/>
-<rect class="box" x="200" y="174" width="195" height="66" rx="7"/><text x="219" y="202">DC–DC → 5 V</text><text class="small" x="219" y="226">제어기 전압은 보드에 맞춤</text>
-<path class="wire led" d="M260 240V268H153V367"/>
-<rect class="box" x="24" y="370" width="282" height="85" rx="7"/><text x="42" y="398">LED A: +5 V → R1 → LED A+</text><text x="42" y="422">LED B: +5 V → R2 → LED B+</text><text class="small" x="42" y="443">J2 4핀 / 각각의 LED 음극은 스위치로</text>
-<path class="wire led" d="M153 455V483"/>
-<rect class="box" x="24" y="486" width="282" height="70" rx="7"/><text x="42" y="514">LED A−, B− → MOSFET → GND</text><text class="small" x="42" y="539">게이트 풀다운 / 전원 켤 때 기본 소등</text>
-<rect class="box" x="26" y="173" width="142" height="141" rx="7"/><text x="44" y="204">제어기</text><text class="small" x="44" y="230">삽입 / 후퇴 명령</text><text class="small" x="44" y="253">IN / OUT 확인</text><text class="small" x="44" y="276">타임아웃 / 고장</text><text class="small" x="44" y="299">점등 요청</text>
-<path class="wire" d="M200 201H170"/>
-<path class="wire" d="M168 290H353V355H410"/>
-<rect class="box" x="412" y="350" width="386" height="93" rx="7"/><text x="430" y="379">방향별 하드웨어 차단 + LED 허용 논리</text><text class="small" x="430" y="403">IN 작동 → 추가 삽입 금지 / OUT 작동 → 추가 후퇴 금지</text><text class="small" x="430" y="428">허용된 반대 방향으로 복귀 가능 / 고장 시 자동 재시작 금지</text>
-<path class="wire" d="M444 351V209H468"/>
-<path class="wire led" d="M412 423H347V520H307"/>
-<text class="small" x="418" y="465">차광 덮개 열림 → 모터 정지 · LED 소등 · 관측 금지</text>
-<rect class="box" x="412" y="484" width="386" height="99" rx="7"/><text x="430" y="514">J3 · IN / OUT / 차광 덮개 — NC 접점 루프</text><text class="small" x="430" y="538">센서 → 논리 입력 / 접점으로 모터 전류를 직접 끊지 않음</text><text class="small" x="430" y="562">제어기에도 상태 전달 / 센서 단선은 허용 해제로 처리</text>
-<path class="wire sense" d="M602 484V444"/>
-<path class="wire sense" d="M412 550H366V329H100V315"/>
-<path class="wire" d="M24 618H798"/><text class="small" x="24" y="643">비절연 회로 기준: 12 V 리턴 · DC–DC · 제어기 · 드라이버 · LED GND를 공통 기준점에 연결.</text>
-<text class="small" x="24" y="667">모터 전류 리턴은 센서선·LED 리턴과 분리 배선 후 전원 기준점에서 합류. USB 전원 역급전은 방지.</text>
-<text class="small" x="24" y="695">예시 R1=R2=1.5 kΩ: 적색 LED Vf≈2 V일 때 각각 약 2 mA. LED 사양과 필요한 밝기에 맞춰 확정.</text>
-<text class="small" x="24" y="720">모터 전류 제한은 광학계 접촉 보호의 보증이 아님. 전원·부품·케이블 정격과 인터록 회로는 실물 시험 필요.</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800"><style>text{font-family:Arial,'Apple SD Gothic Neo',sans-serif;fill:#203e49} .h{font-size:26px;font-weight:bold}.t{font-size:17px}.s{font-size:14px}.b{fill:#eef6f8;stroke:#43818d;stroke-width:2}.w{fill:none;stroke:#bd5c44;stroke-width:3}.g{fill:none;stroke:#567a8b;stroke-width:2}</style><rect width="1200" height="800" fill="#fff"/><text x="40" y="45" class="h">v10 · 면광원 직접 구동 — 전원·신호 구성도</text><text x="40" y="76" class="s">부품 핀 번호를 확정한 제작 배선도가 아닙니다. 보유 ILZ 하네스·드라이버 모듈·스위치 단자를 확인 후 결선합니다.</text>
+<rect class="b" x="40" y="125" width="210" height="90" rx="10"/><text class="t" x="60" y="158">24V DC 전원</text><text class="s" x="60" y="188">±5% / 광원 전용</text>
+<rect class="b" x="330" y="125" width="245" height="90" rx="10"/><text class="t" x="350" y="158">퓨즈 + 기본 OFF 전원 스위치</text><text class="s" x="350" y="188">DC 부하용 릴레이 등 / 정격 선정</text>
+<rect class="b" x="670" y="125" width="215" height="90" rx="10"/><text class="t" x="690" y="158">기존 ILZ 드라이버</text><text class="s" x="690" y="188">고정부에 배치 / 케이블 연결 확인</text>
+<rect class="b" x="950" y="125" width="210" height="90" rx="10"/><text class="t" x="965" y="158">MB-TBL2X2-B</text><text class="s" x="965" y="188">이동 면광원 / 470 nm</text>
+<path class="w" d="M250 170H330M575 170H670M885 170H950"/>
+<rect class="b" x="40" y="300" width="210" height="90" rx="10"/><text class="t" x="60" y="333">12V DC 전원 + 퓨즈</text><text class="s" x="60" y="363">기동·구속전류 확인 후 용량 선정</text>
+<rect class="b" x="330" y="300" width="245" height="90" rx="10"/><text class="t" x="350" y="333">모터 드라이버 H 브리지</text><text class="s" x="350" y="363">DRV8871 검토 / 정·역회전</text>
+<rect class="b" x="670" y="300" width="245" height="90" rx="10"/><text class="t" x="690" y="333">LM2370 / 12V / 150 mm</text><text class="s" x="690" y="363">2선 / 내장 양 끝 리미트</text><path class="w" d="M250 345H330M575 345H670"/>
+<rect class="b" x="40" y="500" width="210" height="90" rx="10"/><text class="t" x="60" y="533">5V DC 전원</text><text class="s" x="60" y="563">12V→5V 변환 / USB 역급전 방지</text>
+<rect class="b" x="330" y="500" width="245" height="90" rx="10"/><text class="t" x="350" y="533">Arduino Nano</text><text class="s" x="350" y="563">PC 명령 / 센서 확인 / 시간 초과</text><path class="w" d="M250 545H330"/><path class="g" d="M450 500V390"/>
+<rect class="b" x="670" y="500" width="245" height="90" rx="10"/><text class="t" x="690" y="533">IN / OUT / 점검창 센서</text><text class="s" x="690" y="563">외부 flag / NC 회로 검토</text><path class="g" d="M670 545H575"/>
+<rect class="b" x="950" y="500" width="210" height="90" rx="10"/><text class="t" x="970" y="533">0–10V 밝기 제어부</text><text class="s" x="970" y="563">출력0V 기본 / 모듈 미선정</text><path class="g" d="M575 577H630V640H1055V590M1055 500V260H780V215M395 500V445H610V245H450V215"/>
+<text class="s" x="40" y="690">• 센서/로직 GND와 드라이버 신호 기준은 해당 모듈 설명서대로 연결합니다. 24V·12V를 Nano 입력에 넣지 않습니다.</text><text class="s" x="40" y="717">• IN 확인 + 정지 + 점검창 닫힘일 때만 점등. 이동 전 소등. 회수 방향은 IN 센서 작동 후에도 허용하도록 설계합니다.</text><text class="s" x="40" y="744">• 정지 감지는 flag가 스위치를 누르는 방식입니다. 스위치가 하중을 받는 물리적 스토퍼가 되어서는 안 됩니다.</text><text class="s" x="40" y="771">• ILZ는 0–10V 밝기 입력 사양입니다. TTL 트리거 제품으로 간주하지 않으며, Nano PWM을 직접 연결하지 않습니다.</text></svg>
