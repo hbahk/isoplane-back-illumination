@@ -1,4 +1,4 @@
-Three.js r128 and OrbitControls bundled in index.html
+Three.js r128 and OrbitControls bundled in index.html and archive/*/index.html
 Source: https://github.com/mrdoob/three.js/tree/r128
 The following license applies to those libraries, not to the device design.
 
