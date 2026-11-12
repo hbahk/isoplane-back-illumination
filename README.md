@@ -23,8 +23,11 @@ K-SPEC is a multi-object fibre spectrograph: robotic positioners place each fibr
 and a metrology camera checks where every fibre end actually is. The camera can only see a fibre
 if light comes out of it, so the fibres have to be **back-illuminated** from the spectrograph end.
 
-For the current commissioning runs the fibres feed an IsoPlane SCT320 instead of the main K-SPEC
-spectrograph. The IsoPlane has no way to inject light backwards through its slit, and the slit
+The main K-SPEC spectrograph has a problem that keeps it out of service for the current
+commissioning period (October 2026 – February 2027). As a plan B, the fibres feed a commercial
+IsoPlane SCT320 for that period, so the rest of the system (positioners, metrology, acquisition
+and the reduction pipeline) can be commissioned on sky. The IsoPlane was never meant for this:
+it has no way to inject light backwards through its slit, and the slit
 end of the fibre bundle is not accessible while it is mounted. The only room near the slit, on
 the optical axis, is the grating-turret compartment under the turret cover. A light placed there,
 facing the slit, sends light back through the slit into the fibres.
